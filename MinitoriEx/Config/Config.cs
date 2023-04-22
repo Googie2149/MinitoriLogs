@@ -13,13 +13,6 @@ namespace MinitoriEx
         [JsonProperty("token")]
         public string Token { get; set; }
 
-        [JsonProperty("twitter_key")]
-        public string TwitterKey { get; set; }
-        [JsonProperty("twitter_secret")]
-        public string TwitterSecret { get; set; }
-        [JsonProperty("twitter_token")]
-        public string TwitterToken { get; set; }
-        
         [JsonProperty("guild_id")]
         public ulong HomeGuildId { get; set; }
 
@@ -28,12 +21,6 @@ namespace MinitoriEx
 
         [JsonProperty("ignored_channels")]
         public List<ulong> IgnoredChannelIds { get; set; }
-
-        [JsonProperty("watched_feeds")]
-        public Dictionary<string, List<ulong>> WatchedTwitterFeeds { get; set; } = new Dictionary<string, List<ulong>>();
-
-        [JsonProperty("webhook_tokens")]
-        public Dictionary<ulong, string> WebHooks { get; set; } = new Dictionary<ulong, string>();
 
         public async static Task<Config> Load()
         {
